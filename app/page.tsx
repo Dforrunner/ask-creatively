@@ -69,13 +69,13 @@ export default function Home() {
             <input
               className='appearance-none bg-transparent w-full text-gray-700  py-1 px-1 leading-tight focus:outline-none border-b border-teal-500'
               type='text'
-              placeholder='Your Name (optional)'
+              placeholder='Your Name (recommended)'
               name='sender'
             />
             <input
               className='appearance-none bg-transparent w-full text-gray-700  py-1 px-1 leading-tight focus:outline-none border-b border-teal-500'
               type='text'
-              placeholder='Recipient Name (optional)'
+              placeholder='Recipient Name (recommended)'
               name='recipient'
             />
           </div>
