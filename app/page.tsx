@@ -75,7 +75,7 @@ export default function Home() {
             <input
               className='appearance-none bg-transparent w-full text-gray-700  py-1 px-1 leading-tight focus:outline-none border-b border-teal-500'
               type='text'
-              placeholder=' Name (optional)'
+              placeholder='Recipient Name (optional)'
               name='recipient'
             />
           </div>
@@ -120,11 +120,10 @@ export default function Home() {
       </div>
 
       <p className='text-gray-500 text-sm max-w-[800px]'>
-        Note From Developer: This is an app I created for fun to ask someone to be my valentine. I
-        decided to put it out there for anyone to use. So if you like it share it with a friend. The
-        data does not get saved anywhere. {`It's`} just used to compile an email to send you your{' '}
-        {"valentine's"} response. If you have any questions or suggestions, feel free to reach out
-        to me at{' '}
+        Note From Developer: This is an app I created for and decided to put it out there for anyone
+        to use. So if you like it share it with a friend. The data does not get saved anywhere.{' '}
+        {`It's`} just used to compile an email to send you your {"valentine's"} response. If you
+        have any questions or suggestions, feel free to reach out to me at{' '}
         <a href='mailto:contact@questionforyou.lol' className='text-blue-500'>
           contact@questionforyou.lol
         </a>
