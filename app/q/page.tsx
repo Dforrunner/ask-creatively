@@ -10,6 +10,7 @@ import { Suspense } from 'react';
 function LoadAppWithUrlParams() {
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
+  console.log('id', id);
   const question = id && decodeQuestion(id);
   if (!question || !question.questionType) return redirect('/404');
   return (

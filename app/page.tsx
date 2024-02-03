@@ -3,12 +3,17 @@
 import { generateLink } from '@/lib/generate-link';
 import { validateEmail } from '@/lib/validators';
 import { QuestionType } from '@/models/QuestionType';
-import { useState } from 'react';
+import { use, useEffect, useState } from 'react';
 
 export default function Home() {
   const [error, setError] = useState('');
   const [link, setLink] = useState('');
   const [copied, setCopied] = useState(false);
+  const [demoLink, setDemoLink] = useState('');
+
+  useEffect(() => {
+    setDemoLink(generateLink({ questionType: QuestionType.Valentine }));
+  }, []);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -112,7 +117,7 @@ export default function Home() {
 
         <a
           className='block bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded w-full mt-2'
-          href={link || generateLink({ questionType: QuestionType.Valentine })}
+          href={link || demoLink}
           target='_blank'
         >
           Demo {link ? 'Link' : ''}
