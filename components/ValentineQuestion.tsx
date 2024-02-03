@@ -151,7 +151,7 @@ export default function ValentineQuestion({ question }: Props) {
 
   const DialogIcon = () => {
     if (state.isYes) return <NapoleonDynamite />;
-    if (state.isNo) return <KimCrying />;
+    if (state.isNo || noClickCount >= 6) return <KimCrying />;
     if (okClickCount.current === 0) return <WarningIcon />;
     if (okClickCount.current === 1) return <PersonQuestionMarkGif />;
     return <CuteHeartGif />;
@@ -164,6 +164,7 @@ export default function ValentineQuestion({ question }: Props) {
   };
 
   const sendResponse = (accepted: boolean) => {
+    if (!question.email) return;
     sendQuestionResponse(question, { accepted })
       .then(() => setResponseSent(true))
       .catch(() => setResponseFailed(false));
