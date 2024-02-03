@@ -3,7 +3,7 @@
 import { generateLink } from '@/lib/generate-link';
 import { validateEmail } from '@/lib/validators';
 import { QuestionType } from '@/models/QuestionType';
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [error, setError] = useState('');

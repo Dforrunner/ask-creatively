@@ -96,8 +96,8 @@ export default function ValentineQuestion({ question }: Props) {
             yesText: 'YES!!!🙏',
             runBtn: true,
             pointer: {
-              x: getRandomNumberInRange(window.innerWidth - 400, 100),
-              y: getRandomNumberInRange(window.innerHeight - 300, 100),
+              x: getRandomNumberInRange(window.innerWidth - 500, 100),
+              y: getRandomNumberInRange(window.innerHeight - 500, 100),
             },
           });
         },
@@ -135,8 +135,8 @@ export default function ValentineQuestion({ question }: Props) {
         state.runBtn
           ? {
               position: 'fixed',
-              top: state.pointer.y - Math.round(Math.random() * 100 + 100),
-              left: state.pointer.x - Math.round(Math.random() * 100 + 100),
+              top: state.pointer.y,
+              left: state.pointer.x,
               zIndex: 1,
             }
           : {}
