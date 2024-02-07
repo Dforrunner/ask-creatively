@@ -18,7 +18,7 @@ interface Props {
 }
 export default function ValentineQuestion({ question }: Props) {
   const [state, setState] = useState({
-    text: "You've been hacked, LOL",
+    text: "Stay with me now! LOL",
     isYes: false,
     isNo: false,
     noText: 'No ',
