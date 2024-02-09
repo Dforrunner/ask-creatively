@@ -38,7 +38,7 @@ export default function ValentineQuestion({ question }: Props) {
   useEffect(() => {
     const timer = setTimeout(() => {
       okClickCount.current = 1;
-      setState({ ...state, text: 'JK! I have just one question for you...' });
+      setState({ ...state, text: 'I have just one question for you...' });
       clearTimeout(timer);
     }, 1500);
     // eslint-disable-next-line react-hooks/exhaustive-deps
